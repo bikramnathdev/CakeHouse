@@ -69,7 +69,6 @@ router.post('/', auth, upload.single('image'), async (req, res, next) => {
         console.log(error.message);
         res.status(500).send('Server error');
     }
-
 });
 router.delete('/:id', auth, async (req, res, next) => {
     try {
