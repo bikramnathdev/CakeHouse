@@ -20,7 +20,6 @@ router.get('/', async (req, res, next) => {
             var s3url = "https://"+bucket+".s3.amazonaws.com/"+fileName;
             imageUrl.push(s3url);
         });
-        console.log('url:' + imageUrl);
         res.status(200).json(posts);
     } catch (error) {
         console.log(error.message);
