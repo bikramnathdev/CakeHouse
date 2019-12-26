@@ -59,13 +59,7 @@ export default class Cakelist extends Component {
         const { cakes } = this.state
         let tableContent
         if (!this.state.isCakeLoaded && !this.state.errorMessage) {
-            tableContent = 
-            <Loader
-                    type="CradleLoader"
-                    color="#00BFFF"
-                    height={100}
-                    width={100}
-                />
+            tableContent = "LOADING"
                         
         }
         else if(this.state.isCakeLoaded && !this.state.errorMessage){
