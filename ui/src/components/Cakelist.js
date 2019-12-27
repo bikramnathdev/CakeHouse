@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Datatable from 'react-bs-datatable'
-import Loader from 'react-loader-spinner'
 import { Modal,Row,Col } from 'react-bootstrap';
-// css for loader
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import ItemForm from './ItemForm';
+import Loader from '../layouts/Loader';
 const header = [
     { title: 'Name', prop: 'name',sortable: true,filterable: true },
     { title: 'Category', prop: 'category', sortable: true },
@@ -59,7 +57,7 @@ export default class Cakelist extends Component {
         const { cakes } = this.state
         let tableContent
         if (!this.state.isCakeLoaded && !this.state.errorMessage) {
-            tableContent = "LOADING"
+            tableContent = <Loader/>
                         
         }
         else if(this.state.isCakeLoaded && !this.state.errorMessage){
