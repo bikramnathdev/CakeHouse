@@ -3,7 +3,7 @@ import axios from 'axios'
 import Datatable from 'react-bs-datatable'
 import { Modal,Row,Col } from 'react-bootstrap';
 import ItemForm from './ItemForm';
-import Loader from '../layouts/Loader';
+import Loader from '../../layouts/Loader';
 const header = [
     { title: 'Name', prop: 'name',sortable: true,filterable: true },
     { title: 'Category', prop: 'category', sortable: true },
